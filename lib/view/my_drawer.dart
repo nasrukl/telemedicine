@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:telemedicineapp/view/appoinment_analysis.dart';
+import 'package:telemedicineapp/view/feedback.dart';
+import 'package:telemedicineapp/view/patient_analysis.dart';
+import 'package:telemedicineapp/view/payment.dart';
 
 import '../utils/response.dart';
 
@@ -143,12 +147,12 @@ class MyDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 26),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 26),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ListTile(
+                  const ListTile(
                     title: Padding(
                       padding: EdgeInsets.only(left: 16),
                       child: Row(
@@ -169,47 +173,62 @@ class MyDrawer extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     height: 0,
                   ),
                   ListTile(
-                    title: Padding(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PatientAnalysis(),
+                        )),
+                    title: const Padding(
                       padding: EdgeInsets.only(left: 16),
                       child: Text('Patients Analysis',
                           style: TextStyle(
                               fontWeight: FontWeight.w400, fontSize: 16)),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     height: 0,
                   ),
                   ListTile(
-                    title: Padding(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Appoinment(),
+                        )),
+                    title: const Padding(
                       padding: EdgeInsets.only(left: 16),
                       child: Text('Appointments Analysis',
                           style: TextStyle(
                               fontWeight: FontWeight.w400, fontSize: 16)),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     height: 0,
                   ),
                   ListTile(
-                    title: Padding(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Payments(),
+                        )),
+                    title: const Padding(
                       padding: EdgeInsets.only(left: 16),
                       child: Text('Payments Analysis',
                           style: TextStyle(
                               fontWeight: FontWeight.w400, fontSize: 16)),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     height: 0,
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Padding(
                       padding: EdgeInsets.only(left: 16),
                       child: Text('Settings',
@@ -217,23 +236,64 @@ class MyDrawer extends StatelessWidget {
                               fontWeight: FontWeight.w400, fontSize: 16)),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     height: 0,
                   ),
                   ListTile(
-                    title: Padding(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: const Text('Do you want to Logout ?'),
+                          content: Row(
+                            children: [
+                              Expanded(
+                                child: OutlinedButton(
+                                    style: OutlinedButton.styleFrom(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(9),
+                                        side: const BorderSide(width: 3),
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: const Text(
+                                      'No',
+                                      style: TextStyle(color: Colors.black),
+                                    )),
+                              ),
+                              const SizedBox(
+                                width: 4,
+                              ),
+                              Expanded(
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.teal,
+                                    ),
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: const Text('Yes')),
+                              )
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                    title: const Padding(
                       padding: EdgeInsets.only(left: 16),
                       child: Text('Logout',
                           style: TextStyle(
                               fontWeight: FontWeight.w400, fontSize: 16)),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     height: 0,
                   ),
-                  ListTile(
+                  const ListTile(
                     title: Padding(
                       padding: EdgeInsets.only(left: 16),
                       child: Text('Help',
@@ -241,23 +301,28 @@ class MyDrawer extends StatelessWidget {
                               fontWeight: FontWeight.w400, fontSize: 16)),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     height: 0,
                   ),
                   ListTile(
-                    title: Padding(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const FeedBack(),
+                        )),
+                    title: const Padding(
                       padding: EdgeInsets.only(left: 16),
                       child: Text('Feedback',
                           style: TextStyle(
                               fontWeight: FontWeight.w400, fontSize: 16)),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                     height: 0,
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.all(3),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -275,10 +340,10 @@ class MyDrawer extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
                         '© Copyright 2023 HealTether. All Rights Reserved',
