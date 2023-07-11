@@ -183,7 +183,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 220,
+                  top: 260,
                   left: 0,
                   right: 0,
                   child: Row(
@@ -195,19 +195,19 @@ class MyHomePage extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             color: Colors.white,
-                            boxShadow: [
-                              const BoxShadow(
+                            boxShadow: const [
+                              BoxShadow(
                                   color: Color(0xff9F9F9F),
                                   blurRadius: 4,
                                   offset: Offset(1, 4))
                             ]),
                         child: Padding(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              const Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
@@ -242,7 +242,7 @@ class MyHomePage extends StatelessWidget {
                                 ],
                               ),
                               Padding(
-                                  padding: EdgeInsets.only(top: 14),
+                                  padding: const EdgeInsets.only(top: 14),
                                   child: Image.asset(
                                       'asset/material-symbols_patient-list-rounded.png'))
                             ],
@@ -331,8 +331,8 @@ class MyHomePage extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.white,
-                          boxShadow: [
-                            const BoxShadow(
+                          boxShadow: const [
+                            BoxShadow(
                                 color: Color(0xff9F9F9F),
                                 blurRadius: 4,
                                 offset: Offset(1, 4))
@@ -447,8 +447,8 @@ class MyHomePage extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.white,
-                          boxShadow: [
-                            const BoxShadow(
+                          boxShadow: const [
+                            BoxShadow(
                                 color: Color(0xff9F9F9F),
                                 blurRadius: 4,
                                 offset: Offset(1, 4))
