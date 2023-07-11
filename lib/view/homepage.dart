@@ -44,7 +44,7 @@ class MyHomePage extends StatelessWidget {
                   ],
                   colors: [
                     Color(0xff00796B),
-                    Color(0x5E03BF9D)
+                    Color(0x5E03BF9D),
                     Color(0x8403BF9D),
                   ],
                 ),
