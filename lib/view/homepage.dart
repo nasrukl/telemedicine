@@ -62,7 +62,7 @@ class MyHomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Hello",
+                        "Dr. Ajit Bhalla",
                         style: TextStyle(color: Colors.white),
                       ),
                     ],
